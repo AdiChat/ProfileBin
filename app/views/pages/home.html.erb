@@ -1,0 +1,45 @@
+<body >
+<div class="jumbotron text-center">
+  <h1 style="color:green">Welcome to Profile Bin</h1>
+  <h3>A SaaS e-commerce application where industry can find students.</h3>
+</div>
+<div class="row">
+  <% if user_signed_in? %>
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center">Your Profile</h2>
+        <% if current_user.profile %>
+          <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+          <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
+        <% else %>
+          <p>Create your profile so that you can share your information with the community.</p>
+          <%= link_to "Create your profile", new_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block'%>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center">The Collection</h2>
+        <p>Find out other prospective learners !</p>
+        <%= link_to "Browse the community", users_path, class: 'btn btn-default btn-lg btn-block' %>
+      </div>
+    </div>
+  <% else %>
+  
+    <div class="col-md-6" >
+      <div class="well" >
+        <h2 class="text-center" style="color:#F52887">Pin your Profile</h2>
+        <h4>Sign up for free and get access to view all student profiles.</h4>
+        <br/>
+        <%= link_to "Sign up for free", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center" style="color:#F52887">Search Students</h2>
+        <h4>Sign up for $10/month and get access to contact information of students</h4>
+        <%= link_to "Sign up for $10/month", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+      </div>
+    </div>
+  <% end %>
+</div></body>

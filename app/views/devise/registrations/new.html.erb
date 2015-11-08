@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 text-center"> 
+    <% if params[:plan] == '2' %>
+      <h1>Paid Account</h1>
+     <% else %>
+      <h1>Open Account</h1>
+    <% end %>
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="well">
+    <h2>Sign up</h2>
+      
+      <% if params[:plan] == '2' %>
+        <%= render "pro_form" %>
+      <% else %>
+        <%= render "basic_form" %>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
