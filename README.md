@@ -1,2 +1,1 @@
-# Profile Bin
-Profile Bin is an e-commerce software as a service application which allows Industry to find students. Students can establish their profiles in the online global community for free and the people from Industry can browse through the list of students and contact them through the contact details provided by the concerned student. The contact details will be accessible only through the paid subscription of ten dollars per month.
+# ProfileBin

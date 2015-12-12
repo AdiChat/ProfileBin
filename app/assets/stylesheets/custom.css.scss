@@ -12,5 +12,30 @@
 	background: linear-gradient(90deg,#000000 10%, #53346D 90%);
 }
 body{
-	background: linear-gradient(90deg,#c2e59c 10%, #64b3f4 90%);	
+	position: relative;
+    background: #000 url("5.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    		
+}
+
+.jumbotron {
+    position: relative;
+    background: #000 url("3.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.well {
+    position: relative;
+    background: #000 url("7.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.9;
 }
