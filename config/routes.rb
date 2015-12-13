@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     root 'pages#home'
-
+  # get '/home' => 'pages#home'
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :users do
     resource :profile
